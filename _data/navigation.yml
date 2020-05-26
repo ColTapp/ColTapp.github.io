@@ -4,6 +4,8 @@
   link: /about.html
 - name: Installation
   link: /installation.html
+- name: GUI overview
+  link: /overview
 - name: Detect colonies
   link: /detect.html
 - name: Time-lapse
