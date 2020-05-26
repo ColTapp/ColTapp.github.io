@@ -1,0 +1,16 @@
+- name: Home
+  link: /
+- name: About
+  link: /about.html
+- name: Installation
+  link: /installation.html
+- name: Detect colonies
+  link: /detect.html
+- name: Time-lapse
+  link: /timelapse.html
+- name: Endpoint
+  link: /endpoint.html
+- name: Export
+  link: /export.html
+- name: Citation
+  link: /citation.html
