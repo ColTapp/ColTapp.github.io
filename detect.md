@@ -3,4 +3,4 @@ layout: default
 title: Detect colonies
 ---
 # Detect colonies
-Instructions to come
+Instructions to follow
