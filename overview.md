@@ -6,7 +6,7 @@ title: GUI overview
 Testing
 <figure>
   <img src="{{site.url}}/assets/images/GUI_1.png" alt="GUI overview"/>
-  <figcaption>GUI overview (Fig S1 from manuscript)/figcaption>
+  <figcaption>GUI overview (Fig S1 from manuscript) </figcaption>
 </figure>
 
 
