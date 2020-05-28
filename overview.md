@@ -13,6 +13,6 @@ Testing
 test2
 
 <center>
-![](/assets/images/GUI_1.png){width=99%}
+![](assets/images/GUI_1.png){width=99%}
 </center>
 
