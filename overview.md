@@ -6,7 +6,7 @@ title: GUI overview
 Testing
 <figure>
   <img src="{{site.url}}/assets/images/GUI_1.png" alt="GUI overview"/>
-  <figcaption>This is my caption text.</figcaption>
+  <figcaption>GUI overview (Fig S1 from manuscript)/figcaption>
 </figure>
 
 
@@ -16,3 +16,4 @@ test2
 ![](assets/images/GUI_1.png){width=99%}
 </center>
 
+testing...
