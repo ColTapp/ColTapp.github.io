@@ -1,3 +1,9 @@
 theme: jekyll-theme-minimal
 name: Julian Baer, Mathilde Boumasmoud, Clément Vulin
 markdown: kramdown
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - codehilite
+  - attr_list
+  - pymdownx.arithmatex
