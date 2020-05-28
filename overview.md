@@ -10,4 +10,4 @@ Testing
 </figure>
 
 Testing 2
-![alt text](https://github.com/ColTapp/ColTapp.github.io/tree/master/assets/images/GUI_1.png "GUI overview")
+![alt text]("{{site.url}}/assets/images/GUI_1.png" "GUI overview")
