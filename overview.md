@@ -3,4 +3,11 @@ layout: default
 title: GUI overview
 ---
 # GUI overview
+Testing
+<figure>
+  <img src="{{site.url}}/assets/images/GUI_1.jpg" alt="GUI overview"/>
+  <figcaption>This is my caption text.</figcaption>
+</figure>
+
+Testing 2
 ![alt text](https://github.com/ColTapp/ColTapp.github.io/tree/master/assets/images/GUI_1.png "GUI overview")
