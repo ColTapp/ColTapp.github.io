@@ -46,20 +46,3 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
-
-
-.site-title::before {
-	content: url("/assets/images/logo.png");
-	display: inline-block;
-	position: relative;
-	width: 37px;
-	top: 5px;
-}
-
-.navbar .nav > li > a.brand-image {
-      padding: 4px 0px 0px 0px;
-}
-.navbar .nav > li > a > img.brand-image {
-    -webkit-border-radius: 0px;
-       -moz-border-radius: 0px;
-            border-radius: 0px;
