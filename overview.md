@@ -9,3 +9,9 @@ Testing
   <figcaption>This is my caption text.</figcaption>
 </figure>
 
+
+test2
+<center>
+![]("{{site.url}}/assets/images/GUI_1.png"){width=99%}
+</center>
+
