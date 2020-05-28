@@ -9,5 +9,3 @@ Testing
   <figcaption>This is my caption text.</figcaption>
 </figure>
 
-Testing 2
-![alt text]("{{site.url}}/assets/images/GUI_1.png" "GUI overview")
