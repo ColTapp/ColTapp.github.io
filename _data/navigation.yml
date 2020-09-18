@@ -5,13 +5,19 @@
 - name: Installation
   link: /installation.html
 - name: GUI overview
-  link: /overview
-- name: Detect colonies
+  link: /overview.html
+- name: Analysis setup
+  link: /setup.html
+- name: Colony detection
   link: /detect.html
-- name: Time-lapse
+- name: Radius tracking
   link: /timelapse.html
-- name: Endpoint
+- name: Reference parameters
+  link: /refparam.html
+- name: Endpoint sequence
   link: /endpoint.html
+- name: Options
+  link: /options.html
 - name: Export
   link: /export.html
 - name: Citation
