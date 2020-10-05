@@ -17,7 +17,7 @@ ColTapp can correct for slight image drift occuring in time-lapse imaging. This 
 ### Colony center correction
 The centering of colony circles is crucial to track radii over time, especially at early timepoints when colonies are small. ColTapp offers an automatic center correction, by tentatively detecting circles on sub-images cropped from an early frame based on the location and radii of the colonies detected on the reference frame. These newly detected circles’ center coordinates are kept as colony center, unless they are farther away than a user-defined threshold from the original coordinates or if they are set to the center coordinates of another colony in close proximity. In these cases, the correction is skipped, and the colonies are added to a list for subsequent manual center correction. If no circle is detected at all because the colony is not yet visible at that timepoint, the same process is repeated 10 frames later. The user is able to monitor this process visually. The green circle is the one chosen by ColTapp as the correct center, red circles are discarded.
 <figure>
-  <img src="{{site.url}}/assets/images/TL2.png" alt="Center correction example" heigth="467px"/>
+  <img src="{{site.url}}/assets/images/TL2.png" alt="Center correction example" height="467px"/>
   <figcaption>Time-lapse Visualization of the center correction. </figcaption>
 </figure>
 
