@@ -27,10 +27,16 @@ If the automatic center correction failed, manual center correction is available
 ### Radius tracking over time
 After all colonies are detected (and optionally the registration is enabled and center correction finished), radius tracking can be started with a simple click on the button _c "Track radii over time"_. This calculates kymographs for each colony from which radius growth curves are derived.
 <figure>
-  <img src="{{site.url}}/assets/images/TL1.png" alt="Kymograph" height="467px"/>
+  <img src="{{site.url}}/assets/images/TL1.png" alt="Kymograph"/>
   <figcaption>A polar transformation from the center of a colony is applied to each subimage of a colony. These transformed images are then averaged and the images of each frame stitched together to ceate a kymograph. (Part of Fig. 7 of publication)</figcaption>
 </figure>
 
-
+### Overlapping colonies
+Neighboring colonies can be visible as blurry regions in the top of kymographs, hindering creation of clean binary images.
+<figure>
+  <img src="{{site.url}}/assets/images/TL3.png" alt="Example of overlapping colonies exclusion"/>
+  <figcaption>Overlapping colonies can cause blurry regions in the upper right part of a kymograph. The angles corresponding to the overlapping region are automatically excluded from the radial average calculation (Part of Fig. 7 of publication)</figcaption>
+</figure>
+To reduce this phenomenon, before the kymograph creation process, overlapping colonies are automatically detected and the ranges of angles corresponding to adjacent colonies are discarded from the polar transformed intensity data. If more than 90% of all angles are discarded because of overlap, the exclusion of angles is omitted completely, to avoid reducing the available data too much. The overlap detection functionality can be deactivated or tuned with Scale radius for overlap (accessible in Options). This scaling factor is multiplied to the radius of the focal colony from which center neighboring colonies are tested for overlap: by increasing it, a user may choose to discard ranges of angles corresponding not only to overlapping colonies but also very close colonies. Note that this increase might lead to high proportions of angles to be discarded. Decreasing the scaling factor leads to reduced ranges of excluded angles. This might be useful in densely populated plates to still achieve some overlap exclusion to increase quality of kymographs at earlier timepoints.
 
 #*__still under construction__*
