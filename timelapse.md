@@ -62,7 +62,20 @@ ColTapp has an inbuilt function to automatically detect radial growth curves wit
 | Parameter | Mode | Function |
 |-------|--------|--------|
 | Contour, nr iterations | Edge | Number of iterations for contouring. Lowering this value might reduce overshoot of radius calculation and increasing this value might help in even out jaggy radius determination |
-| Canny high thresh | Edge | Threshold for initial edge detection. High values allow only strong edges to pass through. |
+| Canny high thresh | Edge | Threshold for initial edge detection. Only edges with a strength higher than this threshold are preserved. |
 | Disk size | Edge | Disk size for various morphological operations. Higher values might help smooth out jagged radius detection but potentially introduce noise, especially close to the beginning of the colony growth |
+| Invert contour | Edge | Sometimes, especially if colonies only fill out a small area of the kymograph, inverting the contour is needed |
+| Global threshold | Global | This value defines an offset of the automatically defined (Otsu) binarization threshold |
+| Pillbox filter | Both | Filtering strength. Higher values lead to smoother images but may introduce noise |
+| Wiener2 filter | Both | Filtering strength. Higher values lead to smoother images but may introduce noise |
+| Max Intensity | Both | Low-pass filter for intensity. Values higher than the set value are set |
+| Canny lo thresh | Edge | Edges with a strength below than this threshold are discarded |
+| Rem vert lines | Edge | Foreground pixels are discarded if a straight vertical line defined as number of white pixels per line is higher than this threshold |
+| Rem horiz lines | Edge | Foreground pixels are discarded if a straight horizontal line defined as number of white pixels per line is higher than this threshold |
+| Noise reduction | Edge | Scaling factor for small foreground object removal |
+| Mask scaling | Edge | Scaling factor for initial mask creating for iterative contouring |
+| Line length | Edge | Length in pixels of a line closing morphological operation |
+| Line angle | Edge | Angle of a line closing morphological operation |
+
 
 #*__still under construction__*
