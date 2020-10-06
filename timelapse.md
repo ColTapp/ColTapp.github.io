@@ -2,6 +2,7 @@
 layout: default
 title: Time-lapse
 ---
+
 #*__still under construction__*
 
 # Radius tracking (time-lapse)
@@ -21,5 +22,10 @@ The centering of colony circles is crucial to track radii over time, especially 
   <figcaption>Visualization of the automatic center correction. </figcaption>
 </figure>
 
-If the automatic center correction failed, manual center correction is available. The user is presented with cropped sub-images of each colony and can click manually on the correct center of each colony. Buttons to add the displayed colony to a list of colonies for which the center correction should be repeated 10 frames before or later are displayed. The colonies of these lists will be automatically displayed afterwards.
+If the automatic center correction failed, manual center correction is available (_b_). The user is presented with cropped sub-images of each colony and can click manually on the correct center of each colony. Buttons to add the displayed colony to a list of colonies for which the center correction should be repeated 10 frames before or later are displayed. The colonies of these lists will be automatically displayed afterwards.
+
+### Radius tracking over time
+After all colonies are detected (and optionally the registration is enabled and center correction finished), radius tracking can be started with a simple click on the button _c "Track radii over time"_.
+
+
 #*__still under construction__*
