@@ -56,7 +56,13 @@ The _Edge detection_ method uses a series of edge detection and morphological op
 ColTapp has an inbuilt function to automatically detect radial growth curves with probable errors derived from kymographs based on the number of local maxima, size of radius differences from frame to frame, monotonicity, and number of frames without a successful radius determination (button _d Find failed kymographs_). These (or any) radial growth curves can be manually corrected with a dedicated tool (button _e Correct kymographs_) which allows the user to switch for each colony individually between Global thresholding and Edge detection method, and adjust any parameter of the two methods to derive best parameter combinations to derive the radial growth curve from the kymograph.
 <figure>
   <img src="{{site.url}}/assets/images/TL4.png" alt="Kymograph correction tool" height="70%"/>
-  <figcaption>Radial growth curve correction tool (Supplementary Fig. S3 of publication). The kymograph is displayed in the middle, buttons to move to last colony, approve radial growth curve, delete radial growth curve and switch growth curve detection mode, as well as possibilities to add the colony to a list, show all image processing steps and abort or save all made changes are on the bottom. On the right side, sliders to change a variety of numerical values in the image processing pipeline are located. Keyboard arrows move the Global threshold or the upper threshold of the Canny edge detection depending on the growth curve detection mode. </figcaption>
+  <figcaption>Radial growth curve correction tool (Supplementary Fig. S3 of publication). The kymograph is displayed in the middle, buttons to move to last colony, approve radial growth curve, delete radial growth curve and switch growth curve detection mode, as well as possibilities to add the colony to a list, show all image processing steps (for _Edge detection_ mode only) and abort or save all made changes are on the bottom. On the right side, sliders to change a variety of numerical values in the image processing pipeline are located. Keyboard arrows move the Global threshold or the upper threshold of the Canny edge detection depending on the growth curve detection mode. </figcaption>
 </figure>
+
+| Parameter | Mode | Function |
+|-------|--------|--------|
+| Contour, nr iterations | Edge | Number of iterations for contouring. Lowering this value might reduce overshoot of radius calculation and increasing this value might help in even out jaggy radius determination |
+| Canny high thresh | Edge | Threshold for initial edge detection. High values allow only strong edges to pass through. |
+| Disk size | Edge | Disk size for various morphological operations. Higher values might help smooth out jagged radius detection but potentially introduce noise, especially close to the beginning of the colony growth |
 
 #*__still under construction__*
