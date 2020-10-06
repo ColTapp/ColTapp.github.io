@@ -25,7 +25,12 @@ The centering of colony circles is crucial to track radii over time, especially 
 If the automatic center correction failed, manual center correction is available (_b_). The user is presented with cropped sub-images of each colony and can click manually on the correct center of each colony. Buttons to add the displayed colony to a list of colonies for which the center correction should be repeated 10 frames before or later are displayed. The colonies of these lists will be automatically displayed afterwards.
 
 ### Radius tracking over time
-After all colonies are detected (and optionally the registration is enabled and center correction finished), radius tracking can be started with a simple click on the button _c "Track radii over time"_.
+After all colonies are detected (and optionally the registration is enabled and center correction finished), radius tracking can be started with a simple click on the button _c "Track radii over time"_. This calculates kymographs for each colony from which radius growth curves are derived.
+<figure>
+  <img src="{{site.url}}/assets/images/TL1.png" alt="Kymograph" height="467px"/>
+  <figcaption>A polar transformation from the center of a colony is applied to each subimage of a colony. These transformed images are then averaged and the images of each frame stitched together to ceate a kymograph. (Part of Fig. 7 of publication)</figcaption>
+</figure>
+
 
 
 #*__still under construction__*
