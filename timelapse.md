@@ -2,9 +2,6 @@
 layout: default
 title: Time-lapse
 ---
-
-#*__still under construction__*
-
 # Radius tracking (time-lapse)
 ColTapp can track the radius of detected colonies through time on time-lapse image series. First, all colonies need to be [detected]({{site.url}}/detect.html) on the latest (or a late) frame in a time-lapse series. All time-lapse associated functions are accessible through a dedicated tab on the GUI. The buttons are labeled with letters and text on this page referring to buttons uses these letters.
 <figure>
@@ -76,6 +73,3 @@ ColTapp has an inbuilt function to automatically detect radial growth curves wit
 | Mask scaling | Edge | Scaling factor for initial mask creating for iterative contouring |
 | Line length | Edge | Length in pixels of a line closing morphological operation |
 | Line angle | Edge | Angle of a line closing morphological operation |
-
-
-#*__still under construction__*
