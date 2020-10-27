@@ -4,7 +4,7 @@ title: Options
 ---
 # Options
 
-The default parameters of each functionality of ColTapp can be tuned by the user within the _Options_. The _Options_ window is divided into four tabs : _Global_, _Detect_, _Main_(_TL_ or _EP_) and _Visualize_. 
+The default parameters of each functionality of ColTapp can be tuned by the user within the _Options_. The _Options_ window is divided into four tabs : _Global_, _Detect_, _Main_ (_TL_ or _EP_) and _Visualize_. 
 
 ## Global
 While the latter tabs regroup parameters corresponding to each corresponding tab of the main panel, the first tab, _Global_ (left panel of the following figure), regroups all parameters which apply globally, whatever the analysis step.
@@ -17,6 +17,11 @@ Using one of the three RGB channels is computationally quick and generally preci
 </figure>
 ### Visualize on image
 The user can use toggles to chose which data should be visualized directly on the images in the main panel.
+<figure>
+  <img src="{{site.url}}/assets/images/Visualize_on_image.png" alt="Visualize on image" height="1094px"/>
+  <figcaption> Visualization on main panel image </figcaption>
+</figure>
+
 ### Reference growth data
 
 ### Save options
