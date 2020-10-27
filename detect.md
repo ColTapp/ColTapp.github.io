@@ -18,7 +18,7 @@ Mainly for visualization and manual correction of detected colonies, the graysca
 </figure>
 
 ### Detect colonies (*d*)
-Automatic colony detection can be started with the _Find Colonies_ button (*d*). If in _TL_ mode, the function is executed on the current frame while in _EP_ mode, the user is asked to enter the frames on which the colony search should be executed. Accuracy and computational speed can be increased by specifying a narrow range of minimal and maximal radius. The range can be specified either by inserting values in pixel in _Options_ (*h*) or can be derived automatically from the smallest and biggest circle drawn on the currently displayed image with the button _Define radius range_ (*d*).
+Automatic colony detection can be started with the _Find Colonies_ button (*d*). If in _TL_ mode, the function is executed on the current frame while in _EP_ mode, the user is asked to enter the frames on which the colony search should be executed. Accuracy and computational speed can be increased by specifying a narrow range of minimal and maximal radius. The range can be specified either by inserting values in pixel in _Options_ or can be derived automatically from the smallest and biggest circle drawn on the currently displayed image with the button _Define radius range_ (*d*).
 Refer to the [manuscript](https://doi.org/10.1038/s41598-020-72979-4) for details on the image analysis steps used.
 
 ### Manual correction of detected colonies (*e*)
