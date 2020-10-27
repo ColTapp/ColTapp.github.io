@@ -6,7 +6,7 @@ title: Analysis setup
 
 We will refer to the letters on the image below for the following instructions:
 <figure>
-  <img src="{{site.url}}/assets/images/Detect_1.png" alt="GUI overview" heigth="550px"/>
+  <img src="{{site.url}}/assets/images/Detect_1.png" alt="GUI overview" height="550px"/>
   <figcaption>GUI overview (modified Fig S1 from manuscript) </figcaption>
 </figure>
 
@@ -14,7 +14,7 @@ We will refer to the letters on the image below for the following instructions:
 ### Spatial calibration (*a*)
 Three options to define a pixel to micrometer spatial calibration factor are available:
 <figure>
-  <img src="{{site.url}}/assets/images/Detect_2.png" alt="GUI overview" heigth="160"/>
+  <img src="{{site.url}}/assets/images/Detect_2.png" alt="GUI overview" height="160"/>
   <figcaption> Set spatial calibration (a) </figcaption>
 </figure>
 1. Enter the known diameter of a circle (e.g. 89’000 micrometers for the inner circle of a standard agar plate) in the editable field and click the _Use reference circle_ button below. A proposed circle is automatically detected and displayed. Either confirm this circle or alter it by clicking on three points on the circle which you want to utilize.
