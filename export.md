@@ -65,7 +65,7 @@ These export option proposes to export some simple colony observables based on t
 - Halo color can be exported as pixel intensity values for a band around the colony calculated either based on a fixed number of pixels or as a mutltiple of colony radius ("halo until distance"). This is typically to measure hemolysis or usefull in colorimetric assays. It can export either RGB values or grayscale image value.
 
 => Note on colonies with rejoining borders: 
-Colonies touching each other will strongly affect perimeter and halo measurments. For this reason, the program excludes merging zones from perimeter and halo calculations. It further exports the sum of the estimated arc length for touching colonies ("Alpha" angle values). This sum can be greater than colony perimeter if touching colonies have common merging arcs due to their large radius.
+Colonies touching each other will strongly affect perimeter and halo measurments. For this reason, the program excludes merging zones from perimeter and halo calculations. It further exports the sum of the estimated arc length for touching colonies ("AlphaRemov" in export file). This sum can be greater than colony perimeter if touching colonies have common merging arcs due to their large radius.
 
 
 
