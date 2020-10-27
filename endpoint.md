@@ -23,3 +23,12 @@ The user can link corresponding folders of multiple image sets taken at differen
   <figcaption>Example of the display of linked folders colonies. </figcaption>
 </figure>
 
+### Growth rate estimation
+In some laboratories, setting-up high-throughput time-lapse imaging might not be possible, thus ColTapp proposes to estimate colony lag time from endpoint images. This is possible because when bacterial cells with a lag resume growth, they rapidly reach their maximal replication rate and the resulting colonies have linear radial growth rates (GR) similar to those of colonies emerging from cells with no lag8. Therefore, a reference linear radial growth rate (GR) (Supplementary text 6) can be used to estimate the colony appearance time tapp based on colony radius R at a given timepoint (tf) by means of a linear extrapolation: 
+<figure>
+  <img src="{{site.url}}/assets/images/EP2.png" alt="Formula for growth rate estimation" height="606px"/>
+  <figcaption>Formula utilized for growth rate and appearance time estimation. </figcaption>
+</figure>
+
+with R<sub>thresh</sub> defining the radius (R) at time t<sub>i</sub> = t<sub>app</sub>.
+
