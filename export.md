@@ -58,7 +58,10 @@ The exported Voronoi area is not sensitive to the radius cutoff, but is sensitiv
 
 ## Shape and color
 
-
+These export option proposes to export some simple colony observables based on the detected colonies. Note that the program recalculates those metrics at each export, and this can be lengthy for large images or high colony numbers. However, they are a good start for automatically assigning colonies to categories, e.g. species based on colony color, or roughtness
+- RGB color and Grayscale value are pixel intensity values based on the image. They can be exported as a mean over the whole colony area or as the center value, which is taken as the average of a central circle with a 5 pxl radius. The "Center" value will be calculated for pixels outside the colony border, should the colony radius be under 5 pxl. The calculation is the same if colonies are touching or not, and is based on the detected radius regardless of the colony area.
+- Texture metrics propose to use image entropy or standard deviation of pixel intensity as a proxy for surface roughness (Simunovic, G. et al. Surface roughness assessing based on digital image features. Advances in Production Engineering & Management 11, 93 (2016)). Image entropy calculation is performed with the Entropy function of Matlab, and is a measure of randomness to characterize the texture of the colony.  It is defined as -sum(p.*log2(p)) where p contains the histogram counts of the image. The calculation for standard deviation and entropy is the same if colonies are touching or not, and is based on the detected radius regardless of the colony area.
+- Perimeter tries to estimate colony perimeter based on a automatic binarisation of colony contour made at a local scale. The automatic binarisation is based on subsampling of the image around the colony as defined by a square zone around its center as defined in the options. The standard deviation of the perimeter is based as the distance to the perfect circle designed by the accepted colony radius for each pixel in the autoatically detected perimeter. It thus depends on iage resolution.  
 
 
 
