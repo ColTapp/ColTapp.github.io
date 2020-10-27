@@ -28,7 +28,7 @@ with R<sub>thresh</sub> defining the radius (R) at time t<sub>i</sub> = t<sub>ap
 ### Load sequence of endpoint images
 The user can link corresponding folders of multiple image sets taken at different timepoints to create timeseries data without the need for a time-lapse imaging setup. ColTapp requires that all image-folders are analysed, i.e. all colonies are detected and a spatial calibration factor for each image is stored. Additionally, the number of detected colonies on a given image should be the same to avoid position matching problems. Colonies on the images in different folders are matched based on the minimal distance of centers between colonies. Upon clicking on button _c_, the user is asked to select all folders containing the different timepoints. Mismatches can be corrected by aligning the images at different timepoints by fitting a geometric transformation to user-defined pairs of points with a nonreflective similarity to estimate rotation and translation of the two images to align (button _e_). As a control-function, the circles of all colonies between different folders can be displayed on the current image (Button _d_). The user then can visually inspect if all circles are aligned and if displayed numbers match (image _a_ below). Radial growth curves can be displayed from the _Visualize_ tab with the _Radius vs Time_ button (image _b_ below).
 <figure>
-  <img src="{{site.url}}/assets/images/EP1.png" alt="Example of linked folders colonies" height="820px"/>
+  <img src="{{site.url}}/assets/images/EP1.png" alt="Example of linked folders colonies" height="822px"/>
   <figcaption>Example of the display of linked folders colonies on the image and resulting radial growth curves. </figcaption>
 </figure>
 
