@@ -9,6 +9,6 @@ The default parameters of each functionality of ColTapp can be tuned by the user
 ### Color to grayscale transformation
 Colored RGB images are transformed into grayscale images for all subsequent image analysis steps. ColTapp offers 16 different methods for grayscale conversion. 
 <figure>
-  <img src="{{site.url}}/assets/images/Options_Global_wGrayscale.png" alt="RGB to grayscale conversion" height="1094px"/>
-  <figcaption> RGB to grayscale conversion examples, accessible through _Options_ (h) </figcaption>
+  <img src="{{site.url}}/assets/images/Options_Global_wGrayscale.png" alt="_Global_ tab of the _Options_ and grayscale conversion methods" height="1094px"/>
+  <figcaption> _Global_ tab of the _Options_ and grayscale conversion methods (h) </figcaption>
 </figure>
