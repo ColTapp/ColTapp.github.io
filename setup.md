@@ -6,7 +6,7 @@ title: Analysis setup
 
 We will refer to the letters on the image below for the following instructions:
 <figure>
-  <img src="{{site.url}}/assets/images/Detect_1.png" alt="GUI overview"/>
+  <img src="{{site.url}}/assets/images/Detect_1.png" alt="GUI overview" heigth="550px"/>
   <figcaption>GUI overview (modified Fig S1 from manuscript) </figcaption>
 </figure>
 
