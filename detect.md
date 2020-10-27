@@ -13,7 +13,7 @@ We will refer to the letters on the image below for the following instructions:
 ### Grayscale image quality (*c*)
 Mainly for visualization and manual correction of detected colonies, the grayscale images can be enhanced with either an auto-contrast toggle (*c*) or using a lighting correction algorithm to remove glares and flares (see example below).
 <figure>
-  <img src="{{site.url}}/assets/images/Detect_3.png" alt="Image enhancement"/>
+  <img src="{{site.url}}/assets/images/Detect_3.png" alt="Image enhancement" height="550px"/>
   <figcaption> Image enhancement (c) </figcaption>
 </figure>
 
