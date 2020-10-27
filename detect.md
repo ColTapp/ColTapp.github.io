@@ -10,13 +10,6 @@ We will refer to the letters on the image below for the following instructions:
   <figcaption>GUI overview (modified Fig S1 from manuscript) </figcaption>
 </figure>
 
-### Color to grayscale transformation
-Colored RGB images are transformed into grayscale images for all subsequent image analysis steps. ColTapp offers 16 different methods for grayscale conversion. These can be changed in the _Global_ section of the _Options_ (*h*). Examples are shown below
-<figure>
-  <img src="{{site.url}}/assets/images/Detect_4.png" alt="RGB to grayscale conversion" height="1094px"/>
-  <figcaption> RGB to grayscale conversion examples, accessible through _Options_ (h) </figcaption>
-</figure>
-
 ### Grayscale image quality (*c*)
 Mainly for visualization and manual correction of detected colonies, the grayscale images can be enhanced with either an auto-contrast toggle (*c*) or using a lighting correction algorithm to remove glares and flares (see example below).
 <figure>
