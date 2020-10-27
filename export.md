@@ -62,12 +62,10 @@ These export option proposes to export some simple colony observables based on t
 - RGB color and Grayscale value are pixel intensity values based on the image. They can be exported as a mean over the whole colony area or as the center value, which is taken as the average of a central circle with a 5 pxl radius. The "Center" value will be calculated for pixels outside the colony border, should the colony radius be under 5 pxl. The calculation is the same if colonies are touching or not, and is based on the detected radius regardless of the colony area.
 - Texture metrics propose to use image entropy or standard deviation of pixel intensity as a proxy for surface roughness (Simunovic, G. et al. Surface roughness assessing based on digital image features. Advances in Production Engineering & Management 11, 93 (2016)). Image entropy calculation is performed with the Entropy function of Matlab, and is a measure of randomness to characterize the texture of the colony.  It is defined as -sum(p.*log2(p)) where p contains the histogram counts of the image. The calculation for standard deviation and entropy is the same if colonies are touching or not, and is based on the detected radius regardless of the colony area.
 - Perimeter tries to estimate colony perimeter based on a automatic binarisation of colony contour made at a local scale. The automatic binarisation is based on subsampling of the image around the colony as defined by a square zone around its center, with square side being 15% larger than the colony radius (or last colony radiusin timelapses). The standard deviation of the perimeter is based as the distance to the perfect circle designed by the accepted colony radius for each pixel in the autoatically detected perimeter. Both length and standard deviation thus depends on image resolution. Note that edges detected that are further than 1.1 colony radius from the center of the colony will not be taken into account.
-- Halo color can be exported as pixel intensity values for a band around the colony sacled either based on a fixed number of pixels or as a mutltiple of colony radius ("halo until distance"). This is typically to measure hemolysis or usefull in colorimetric assays.
+- Halo color can be exported as pixel intensity values for a band around the colony sacled either based on a fixed number of pixels or as a mutltiple of colony radius ("halo until distance"). This is typically to measure hemolysis or usefull in colorimetric assays. 
 
-<u> 
-  Note on colonies with rejoining borders: 
-</u> 
-colonies touching each other will strongly affect perimeter and halo measurments. For this reason, the program proposes an Alphas value that correspond to the sum of the estimated arc length for touching colonies.
+### Note on colonies with rejoining borders: 
+Colonies touching each other will strongly affect perimeter and halo measurments. For this reason, the program proposes an Alphas value that correspond to the sum of the estimated arc length for touching colonies.
 
 
 
