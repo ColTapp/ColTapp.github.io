@@ -64,7 +64,10 @@ These export option proposes to export some simple colony observables based on t
 - Perimeter tries to estimate colony perimeter based on a automatic binarisation of colony contour made at a local scale. The automatic binarisation is based on subsampling of the image around the colony as defined by a square zone around its center, with square side being 15% larger than the colony radius (or last colony radiusin timelapses). The standard deviation of the perimeter is based as the distance to the perfect circle designed by the accepted colony radius for each pixel in the autoatically detected perimeter. Both length and standard deviation thus depends on image resolution. Note that edges detected that are further than 1.1 colony radius from the center of the colony will not be taken into account.
 - Halo color can be exported as pixel intensity values for a band around the colony sacled either based on a fixed number of pixels or as a mutltiple of colony radius ("halo until distance"). This is typically to measure hemolysis or usefull in colorimetric assays.
 
-<u> Note on colonies with rejoining borders: </u>colonies touching each other will strongly affect perimeter and halo measurments. For this reason, the program proposes an Alphas value that correspond to the sum of the estimated arc length for touching colonies.
+<u> 
+  Note on colonies with rejoining borders: 
+</u> 
+colonies touching each other will strongly affect perimeter and halo measurments. For this reason, the program proposes an Alphas value that correspond to the sum of the estimated arc length for touching colonies.
 
 
 
