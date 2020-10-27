@@ -9,7 +9,7 @@ For further use in data analysis, some metrics on colonies can be exported. This
 <figure>
   <img src="https://github.com/ColTapp/ColTapp.github.io/blob/master/assets/images/ExportMenu.png" 
        alt=" Export menu overview" 
-       width="300"
+       width="500"
   <figcaption> Export menu overview (SI Fig.3 in manuscript) </figcaption>
   
 </figure>
