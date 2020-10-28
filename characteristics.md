@@ -5,19 +5,6 @@ title: Colony characteristics
 # Colony characteristics
 ColTapp includes various ways to quantify image based color, shape and plate density metrics. They are optional and are directly calculated when executing the [data export]({{site.url}}/export.html). The Voronoi cell area can also be calculated from the Detect tab and can be visualized on the displayed images.
 
-
-### Density metrics
-As described in original article for the software presentation, those are values based on colony proximity. The user can set a radius cutoff for metrics that strictly depend on distance to all colonies, so that colonies further than this radius cutoff will not be taken into consideration for the calculation. 
-For example, should 4 colonies be on a plate, with 3 colonies at distance 1, 2, 4 to the focal colony, ∑1/D would be 1+1/2+1/4=1.75 for an infinite cutoff, while it would be 1+1/2=1.5 if the cutoff is set to be below a distance of 4. Note that this radius cutoff can be handy in crowded plates when the user knows the diffusion constants of signalling molecules and the time for which it can have diffused.
- 
-The angular diameter is calculated as 𝐴D = ∑ 2*arctan(R<sub>i</sub> / D<sub>i</sub>), where R<sub>_</sub> and D<sub>i</sub> are the radius and distance from the focal colony of each neighboring colony. This metric will thus assume bigger colonies have a larger influence on focal colonies than their smaller counterparts.
-
-The exported *Voronoi* area is not sensitive to the radius cutoff, but is sensitive to a proper plate border definition. Voronoi cell areas describe the total space on an agar plate available to each colony, obtained by tracing perpendicular bisector lines between each pair of neighboring colonies. For the Voronoi calculation to work properly, it is important that a circular (plate) [area of interest (AOI)]({{site.url}}/setup.html) is defined. The Voronoi calculation can either be triggered from the corresponding button in the [Detect tab]({{site.url}}/detect.html) or from within the [Export menu]({{site.url}}/export.html).
-<figure>
-  <img src="{{site.url}}/assets/images/chara1.png" alt="Voronoi example" height="250x"/>
-  <figcaption>The blue edges show the calculated Voronoi cell areas. The visualization of these can be activated from the Options window </figcaption>
-</figure>
-
 ### Shape and color
 These export option proposes to export some simple colony measurements based on the detected colonies. Note that the program recalculates those metrics at each export, and this can be lengthy for large images or high colony numbers. However, they are a good start for automatically assigning colonies to categories, e.g. species based on colony color, or roughness.
 - RGB color and Grayscale value are pixel intensity values based on the original image. They can be exported as a mean over the whole colony area or as the center value, which is taken as the average a 5 pxl radius circle around the colony center. The "Center" value will be calculated for pixels outside the colony border, should the colony radius be under 5 pxl. The calculation is the same if colonies are touching or not, and is based on the detected radius regardless of the colony area.
@@ -32,4 +19,15 @@ These export option proposes to export some simple colony measurements based on 
 => Note on colonies with rejoining borders: 
 Colonies touching each other will strongly affect perimeter and halo measurments. For this reason, the program excludes merging zones from perimeter and halo calculations. It further exports the sum of the estimated arc length (degrees) for touching colonies ("AlphaRemov" in export file). This sum can be greater than 360° if touching colonies have common merging arcs due to their large radius.
 
+### Density metrics
+As described in original article for the software presentation, those are values based on colony proximity. The user can set a radius cutoff for metrics that strictly depend on distance to all colonies, so that colonies further than this radius cutoff will not be taken into consideration for the calculation. 
+For example, should 4 colonies be on a plate, with 3 colonies at distance 1, 2, 4 to the focal colony, ∑1/D would be 1+1/2+1/4=1.75 for an infinite cutoff, while it would be 1+1/2=1.5 if the cutoff is set to be below a distance of 4. Note that this radius cutoff can be handy in crowded plates when the user knows the diffusion constants of signalling molecules and the time for which it can have diffused.
+ 
+The angular diameter is calculated as 𝐴D = ∑ 2*arctan(R<sub>i</sub> / D<sub>i</sub>), where R<sub>_</sub> and D<sub>i</sub> are the radius and distance from the focal colony of each neighboring colony. This metric will thus assume bigger colonies have a larger influence on focal colonies than their smaller counterparts.
+
+The exported *Voronoi* area is not sensitive to the radius cutoff, but is sensitive to a proper plate border definition. Voronoi cell areas describe the total space on an agar plate available to each colony, obtained by tracing perpendicular bisector lines between each pair of neighboring colonies. For the Voronoi calculation to work properly, it is important that a circular (plate) [area of interest (AOI)]({{site.url}}/setup.html) is defined. The Voronoi calculation can either be triggered from the corresponding button in the [Detect tab]({{site.url}}/detect.html) or from within the [Export menu]({{site.url}}/export.html).
+<figure>
+  <img src="{{site.url}}/assets/images/chara1.png" alt="Voronoi example" height="250x"/>
+  <figcaption>The blue edges show the calculated Voronoi cell areas. The visualization of these can be activated from the Options window </figcaption>
+</figure>
 
