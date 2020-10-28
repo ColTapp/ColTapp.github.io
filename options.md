@@ -18,7 +18,7 @@ Using one of the three RGB channels is computationally quick and generally preci
 ### Visualize on image
 The user can use toggles to chose which data should be visualized directly on the images in the main panel.
 <figure>
-  <img src="{{site.url}}/assets/images/Visualize_on_image.png" alt="Visualize on image" height="550px"/>
+  <img src="{{site.url}}/assets/images/Visualize_on_image.png" alt="Visualize on image" height="70%"/>
   <figcaption> Visualization on main panel image </figcaption>
 </figure>
 
