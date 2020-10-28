@@ -14,7 +14,7 @@ The angular diameter is calculated as 𝐴D = ∑ 2*arctan(R<sub>i</sub> / D<sub
 
 The exported *Voronoi* area is not sensitive to the radius cutoff, but is sensitive to a proper plate border definition. Voronoi cell areas describe the total space on an agar plate available to each colony, obtained by tracing perpendicular bisector lines between each pair of neighboring colonies. For the Voronoi calculation to work properly, it is important that a circular (plate) [area of interest (AOI)]({{site.url}}/setup.html) is defined. The Voronoi calculation can either be triggered from the corresponding button in the [Detect tab]({{site.url}}/detect.html) or from within the [Export menu]({{site.url}}/export.html).
 <figure>
-  <img src="{{site.url}}/assets/images/chara1.png" alt="Voronoi example" height="500px"/>
+  <img src="{{site.url}}/assets/images/chara1.png" alt="Voronoi example" height="250x"/>
   <figcaption>The blue edges show the calculated Voronoi cell areas. The visualization of these can be activated from the Options window </figcaption>
 </figure>
 
@@ -25,7 +25,7 @@ These export option proposes to export some simple colony measurements based on 
 - Perimeter tries to estimate colony perimeter based on a automatic binarisation of colony contour made at a local scale. The automatic binarisation is based on subsampling of the image around the colony as defined by a square zone around its center, with square side being 15% larger than the colony radius (or last colony radius in timelapses). The standard deviation of the perimeter is based as the distance to the perfect circle designed by the accepted colony radius for each pixel in the automatically detected perimeter. Both length and standard deviation thus depends on image resolution. Note that edges detected that are further than 1.1 colony radius from the center of the colony will not be taken into account.
 - Halo color can be exported as pixel intensity values for a band around the colony calculated either based on a fixed number of pixels or as a mutltiple of colony radius ("halo until distance"). This is typically to measure hemolysis or usefull in colorimetric assays. It can export either RGB values or grayscale image value.
 <figure>
-  <img src="{{site.url}}/assets/images/chara2.png" alt="Color and shape characteristics" height="600px"/>
+  <img src="{{site.url}}/assets/images/chara2.png" alt="Color and shape characteristics" height="450px"/>
   <figcaption>Some examples of different colony morphologies and colors and the derived measurements (Part of Supplementary Fig. S4 of publication) </figcaption>
 </figure>
 
