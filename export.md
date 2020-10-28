@@ -3,7 +3,6 @@ layout: default
 title: Export
 ---
 # Export 
-
 For further use in data analysis, some metrics on colonies can be exported. This is based on colonies that were already found in the program. This page describes the export options. Most variables are exported as a three-column table, containing the frame number, the colony number and the exported data of interest, grouped with similar variables. See SI Fig. 4 from manuscript for some illustration on colonies.
 
 <figure>
@@ -12,7 +11,6 @@ For further use in data analysis, some metrics on colonies can be exported. This
 </figure>
 
 ### Metadata export
-
 This option exports several analysis parameters that were used for analysis, including (when relevant):
 - total image number
 - image folder
@@ -23,14 +21,12 @@ This option exports several analysis parameters that were used for analysis, inc
 - time of data export
 
 ### Export options
-
 Data delimiter in the CSV and export unit (µm / pxl) can be set. A subpart of the data can be exported rather than the whole data, on specific frames (images) or colonies. For this, specify numbers in one of those formats:
 - a list of frames/colonies spearated by commas e.g. 1,3,4,6,8 => values outside range will be ignored
 - a list in the form Start:Gap:End, e.g. 2:3:13 will export 2,5,8,11.
 - for colonies, a list number identifier, specified as a single negative value (for list identifiers, see main GUI. The existing lists are showed in the Export window under "User Lists", see below)
 
 ### Growth parameters
-
 Those are the parameters obtained as explained in depth in original article, when calculated:
 - Appearance time is the time at which colony size reaches the defined threshold
 - Growth rate is the growth rate obtained from time-lapse images or overlaying pictures
