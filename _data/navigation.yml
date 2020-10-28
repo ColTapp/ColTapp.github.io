@@ -10,14 +10,14 @@
   link: /setup.html
 - name: Colony detection
   link: /detect.html
+- name: Colony characteristics
+  link: /characteristics.html
 - name: Radius tracking
   link: /timelapse.html
 - name: Reference parameters
   link: /refparam.html
 - name: Endpoint analysis
   link: /endpoint.html
-- name: Colony characteristics
-  link: /characteristics.html
 - name: Options
   link: /options.html
 - name: Export
