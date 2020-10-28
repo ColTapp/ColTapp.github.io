@@ -32,5 +32,11 @@ The user can use toggles to chose which data should be visualized directly on th
 ## Detect
 ## Main-TL
 ## Main-EP
+
 ## Visualize
+
+<figure>
+  <img src="{{site.url}}/assets/images/Options_Visualize.png" alt="Options Visualize" height="70%"/>
+    <figcaption> Visualize tab of the Options and example of colony growth curves visualization</figcaption> 
+</figure>
 
