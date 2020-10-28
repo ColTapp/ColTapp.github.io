@@ -6,7 +6,7 @@ title: Endpoint
 
 Functions specific for endpoint image analysis can be found in the **Main-EP** tab.
 <figure>
-  <img src="{{site.url}}/assets/images/EP0.png" alt="Endpoint tab of GUI" width="500px"/>
+  <img src="{{site.url}}/assets/images/EP0.png" alt="Endpoint tab of GUI" height="500px"/>
   <figcaption>Endpoint tab of ColTapp GUI. Part of Fig. S1 of the publication </figcaption>
 </figure>
 
