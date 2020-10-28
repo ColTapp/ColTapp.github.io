@@ -22,8 +22,8 @@ The user can use toggles to chose which data should be visualized directly on th
   <figcaption> Visualization on main panel image </figcaption>
 </figure>
 The "Redefine lighting correction area" button allows a user to chose a new subset of the image as input to the [lighting correction algorithm](https://coltapp.github.io/detect.html).
-
 ### Reference growth data
+When extracted a automatically from an analyzed control experiment, the [reference appearance time](https://coltapp.github.io/refparam.html) of that experiment is averaged, using the mean by default. Yet, users concerned by the presence of outliers in the growth control experiment may chose to use the median (or any user-defined quantile) via this tab.
 
 ### Save options
 
