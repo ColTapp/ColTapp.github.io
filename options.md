@@ -20,12 +20,12 @@ Using one of the three RGB channels is computationally quick and generally preci
 
 ### Visualize on image
 
-The user can use toggles to chose which data should be visualized directly on the images in the main panel.
+- The user can use toggles to chose which data should be visualized directly on the images in the main panel.
 <figure>
   <img src="{{site.url}}/assets/images/Visualize_on_image.png" alt="Visualize on image" height="70%"/>
   <figcaption> Visualization on main panel image </figcaption>
 </figure>
-The _Redefine lighting correction area_ button allows a user to chose a new subset of the image as input to the [lighting correction algorithm](https://coltapp.github.io/detect.html).
+- The _Redefine lighting correction area_ button allows a user to chose a new subset of the image as input to the [lighting correction algorithm](https://coltapp.github.io/detect.html).
 
 ### Reference growth data
 
@@ -44,9 +44,9 @@ ColTapp allows to group colonies into [lists](https://coltapp.github.io/detect.h
 
 ### Image preprocessing
 
-Default:Adaptive, Global, none
-Binarization sensitivity
-Should the user want to detect white colonies on a darker background,
+- Default:Adaptive, Global, none
+- Binarization sensitivity
+- Should the user want to detect white colonies on a darker background,
 
 ### Colony detection parameters
 
@@ -56,15 +56,25 @@ Should the user want to detect white colonies on a darker background,
 - The _Reference frame_, on which colonies are found and from which the radii are tracked on the other frames, is set to the last frame of the time-lapse by default. 
 - The _Time interval_ between frames of a time-lapse serie is automatically detected upon import and if this automatical detection fails, the user is asked to define it. 
 - The _Registration factor_ (κ) defines the subpixels resolution (1/κ) at which the image registration algorithm performs a 2-D rigid translation (default: 100)
-- The _Kymograph threshold shift_ is (default:0.17)
+- The _Kymograph threshold shift_ (default:0.17)
 - The _Scale radius for overlap_ factor (default: 1) is multiplied to the radius of the focal colony from which [neighboring colonies are tested for overlap] (https://coltapp.github.io/timelapse.html). By increasing it (>1), ranges of angles corresponding not only to overlapping colonies but also very close colonies will be discarded from the kymograph creation process. Note that this increase might lead to high proportions of angles to be discarded. Decreasing the scaling factor (<1) leads to reduced ranges of excluded angles. This might be useful in densely populated plates to still achieve some overlap exclusion to increase quality of kymographs at earlier timepoints. Note that if more than 90% of all angles are discarded because of overlap, the exclusion of angles is omitted completely, to avoid reducing the available data too much. 
 - This overlap detection functionality can be completely removed by the user by ticking the _overlap exclusion_ tickbox.
 - The images can be transformed with the lighting correction algorithm in the [_Detect_ tab ](https://coltapp.github.io/detect.html). The resulting enhanced images are typically for a clearer visualization for the user, and by default not used downstream for image analysis. However, a user can tick the box _Use enhance images_ if willing to use these transformed images as input for the radii tracking algorithm.
 
 ### Define appearance time parameters
+- The _Apperance time threshold mode_ (Micrometer or Pixel)
+- The _Detection threshold radius_ (default: 200)
+- The _Number of frames for fit_ (default: 50)
 
 ### Additional possibilities
-
+- _Process timelapse subset_
+- _Manually process timelapse_
+- _Recalculate kymograph radius_
+- _Select curves to delete_ 
+- _Restore deleted curves_
+- _Reset registration_
+- _Delete radius data of selected frames_
+- _Scale detected radius_
 
 ## Main-EP
 
