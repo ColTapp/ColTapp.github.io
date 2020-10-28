@@ -77,6 +77,11 @@ ColTapp allows to group colonies into [lists](https://coltapp.github.io/detect.h
 - _Scale detected radius_
 
 ## Main-EP
+### Additional possibilities
+- _Apply spatial calibration factor to all frames_
+- _Apply area of interest to all frames_
+- _Apply both to all frames_
+- _Remove linked and overlay folders_
 
 ## Visualize
 
