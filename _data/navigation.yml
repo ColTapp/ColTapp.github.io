@@ -16,6 +16,8 @@
   link: /refparam.html
 - name: Endpoint analysis
   link: /endpoint.html
+- name: Colony characteristics
+  link: /characteristics.html
 - name: Options
   link: /options.html
 - name: Export
