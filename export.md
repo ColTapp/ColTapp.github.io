@@ -44,7 +44,7 @@ This option exports lists as binary values (0: not on list, 1: on list) correspo
     - growth curve detection failure (failed Kymograph) 
     - colonies in close range to each other ("near col")
   
- ## Density metrics
+## Density metrics
  
  As described in original article for the software presentation, those are values based on colony proximity. The user can set a radius cutoff for metrics that strictly depend on distance to all colonies, so that colonies further than this radius cutoff not be taken into consideration for the calculation. 
  For example, should 4 colonies be on a plate, with 3 colonies at distance 1, 2, 4 to the focal colony, ∑1/D would be 1+1/2+1/4=1.75 for an infinite cutoff, while it would be 1+1/2=1.5 if the cutoff is set to be below a distance of 4. Note that this radius cutoff can be handy in crowded plates when the user knows the diffusion constants of signalling molecules and the time for which it can have diffused.
