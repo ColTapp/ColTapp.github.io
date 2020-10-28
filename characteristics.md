@@ -3,6 +3,8 @@ layout: default
 title: Colony characteristics
 ---
 # Colony characteristics
+ColTapp includes various ways to quantify image based color, shape and plate density metrics. They are optional and are directly calculated when executing the [data export]({{site.url}}/export.html). The Voronoi cell area can also be calculated from the Detect tab and can be visualized on the displayed images.
+
 
 ### Density metrics
 As described in original article for the software presentation, those are values based on colony proximity. The user can set a radius cutoff for metrics that strictly depend on distance to all colonies, so that colonies further than this radius cutoff will not be taken into consideration for the calculation. 
@@ -10,7 +12,7 @@ For example, should 4 colonies be on a plate, with 3 colonies at distance 1, 2, 
  
 The angular diameter is calculated as 𝐴D = ∑ 2*arctan(R<sub>i</sub> / D<sub>i</sub>), where R<sub>_</sub> and D<sub>i</sub> are the radius and distance from the focal colony of each neighboring colony. This metric will thus assume bigger colonies have a larger influence on focal colonies than their smaller counterparts.
 
-The exported Voronoi area is not sensitive to the radius cutoff, but is sensitive to a proper plate border definition.
+The exported *Voronoi* area is not sensitive to the radius cutoff, but is sensitive to a proper plate border definition. Voronoi cell areas describe the total space on an agar plate available to each colony, obtained by tracing perpendicular bisector lines between each pair of neighboring colonies. For the Voronoi calculation to work properly, it is important that a circular (plate) [area of interest (AOI)]({{site.url}}/setup.html) is defined. The Voronoi calculation can either be triggered from the corresponding button in the [Detect tab]({{site.url}}/detect.html) or from within the [Export menu]({{site.url}}/export.html). 
 
 ### Shape and color
 These export option proposes to export some simple colony measurements based on the detected colonies. Note that the program recalculates those metrics at each export, and this can be lengthy for large images or high colony numbers. However, they are a good start for automatically assigning colonies to categories, e.g. species based on colony color, or roughness.
