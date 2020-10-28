@@ -21,6 +21,7 @@ The user can use toggles to chose which data should be visualized directly on th
   <img src="{{site.url}}/assets/images/Visualize_on_image.png" alt="Visualize on image" height="70%"/>
   <figcaption> Visualization on main panel image </figcaption>
 </figure>
+The "Redefine lighting correction area" button allows a user to chose a new subset of the image as input to the [lighting correction algorithm](https://coltapp.github.io/detect.html).
 
 ### Reference growth data
 
