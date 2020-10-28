@@ -21,8 +21,10 @@ The user can use toggles to chose which data should be visualized directly on th
   <img src="{{site.url}}/assets/images/Visualize_on_image.png" alt="Visualize on image" height="70%"/>
   <figcaption> Visualization on main panel image </figcaption>
 </figure>
-
+The "Redefine lighting correction area" button allows a user to chose a new subset of the image as input to the [lighting correction algorithm](https://coltapp.github.io/detect.html).
 ### Reference growth data
+When extracted a automatically from an analyzed control experiment, the [reference appearance time](https://coltapp.github.io/refparam.html) of that experiment is 
+averaged using the mean, by default. Yet, users concerned by the presence of outliers in the growth control experiment may chose to use the median (or any user-defined quantile) via this tab.
 
 ### Save options
 
@@ -32,5 +34,11 @@ The user can use toggles to chose which data should be visualized directly on th
 ## Detect
 ## Main-TL
 ## Main-EP
+
 ## Visualize
+
+<figure>
+  <img src="{{site.url}}/assets/images/Options_Visualize.png" alt="Options Visualize" height="70%"/>
+    <figcaption> Visualize tab of the Options and example of colony growth curves visualization</figcaption> 
+</figure>
 
