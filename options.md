@@ -8,31 +8,42 @@ The default parameters of each functionality of ColTapp can be tuned by the user
 
 ## Global
 While the latter tabs regroup parameters corresponding to each corresponding tab of the main panel, the first tab, _Global_ (left panel of the following figure), regroups all parameters which apply globally, whatever the analysis step.
-### Color to grayscale method selection
+_Color to grayscale method selection_
 Colored RGB images are transformed into grayscale images for many image analysis steps (colony detection, colony kymograph derivation from time-lapse images). ColTapp offers 16 different methods for grayscale conversion. 
 Using one of the three RGB channels is computationally quick and generally precise enough, but in some special cases, the user may want to use a different conversion, as for example a transformation to other classical color spaces (e.g. CIELAB) and using one of the generated channels. The inbuilt MATLAB function rgb2gray which uses a weighted image conversion, retaining information of all three color channels, is also available. With "Select RGB to grayscale method from examples" the user may visualize the result of each different method (as shown in the right panel of the following Figure) and select the most appropriate method.
 <figure>
   <img src="{{site.url}}/assets/images/Options_Global_wGrayscale.png" alt="Global tab" height="800px"/>
   <figcaption> Global tab of the Options (Part of Fig. S2 of the publication) and grayscale conversion methods </figcaption>
 </figure>
-### Visualize on image
+_Visualize on image_
 The user can use toggles to chose which data should be visualized directly on the images in the main panel.
 <figure>
   <img src="{{site.url}}/assets/images/Visualize_on_image.png" alt="Visualize on image" height="70%"/>
   <figcaption> Visualization on main panel image </figcaption>
 </figure>
 The "Redefine lighting correction area" button allows a user to chose a new subset of the image as input to the [lighting correction algorithm](https://coltapp.github.io/detect.html).
-### Reference growth data
+_Reference growth data_
 When extracted a automatically from an analyzed control experiment, the [reference appearance time](https://coltapp.github.io/refparam.html) of that experiment is 
 averaged using the mean, by default. Yet, users concerned by the presence of outliers in the growth control experiment may chose to use the median (or any user-defined quantile) via this tab.
 
-### Save options
+_Save options_
+Autosave, back-up save
 
-### Reset active list
-
+_Reset active list_
+ColTapp allows to group colonies into [lists](https://coltapp.github.io/detect.html) to use certain downstream functions only on the indicated subset of colonies. User can remove all colonies from the active list on the main panel with this button.
 
 ## Detect
+_Image preprocessing_
+Default:Adaptive, Global, none
+Binarization sensitivity
+Should the user want to detect white colonies on a darker background,
+_Colony detection parameters_
+
 ## Main-TL
+_Define radii-tracking parameters_
+_Define appearance time parameters_
+_Additional possibilities_
+
 ## Main-EP
 
 ## Visualize
