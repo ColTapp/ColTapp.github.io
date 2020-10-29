@@ -3,7 +3,7 @@ layout: default
 title: Colony characteristics
 ---
 # Colony characteristics
-ColTapp includes various ways to quantify image based color, shape and plate density metrics. Most of these metrics are directly calculated when executing the [data export]({{site.url}}/export.html), according to the user wishes, apart from the Voronoi cell areas which need to be calculated prior export, from the _Detect_ tab and can be visualized on the displayed images. Note that the program recalculates the metrics at each export, and this can be lengthy for large images or high colony numbers. 
+ColTapp includes various ways to quantify image based color, shape and plate density metrics. Most of these metrics are directly calculated when executing the [data export]({{site.url}}/export.html), according to the user wishes, apart from the Voronoi cell areas which need to be calculated prior export, from the _Detect_ tab (_Voronoi caluclation_ button) and can be visualized on the displayed images. Note that the other metrics are recalculated by the program at each export, and this can be lengthy for large images or high colony numbers. 
 
 ### Shape and color
 Colony color or roughness may be a good starting point for automatically assigning colonies to categories, e.g. species.
@@ -25,7 +25,7 @@ For example, should 4 colonies be on a plate, with 3 colonies at distance 1, 2, 
  
 The angular diameter is calculated as 𝐴D = ∑ 2*arctan(R<sub>i</sub> / D<sub>i</sub>), where R<sub>_</sub> and D<sub>i</sub> are the radius and distance from the focal colony of each neighboring colony. This metric will thus assume bigger colonies have a larger influence on focal colonies than their smaller counterparts.
 
-The exported *Voronoi* area is not sensitive to the radius cutoff, but is sensitive to a proper plate border definition. Voronoi cell areas describe the total space on an agar plate available to each colony, obtained by tracing perpendicular bisector lines between each pair of neighboring colonies. For the Voronoi calculation to work properly, it is important that a circular (plate) [area of interest (AOI)]({{site.url}}/setup.html) is defined. The Voronoi calculation can either be triggered from the corresponding button in the [Detect tab]({{site.url}}/detect.html) or from within the [Export menu]({{site.url}}/export.html).
+The *Voronoi* area is not sensitive to the radius cutoff, but is sensitive to a proper plate border definition. Voronoi cell areas describe the total space on an agar plate available to each colony, obtained by tracing perpendicular bisector lines between each pair of neighboring colonies. For the Voronoi calculation to work properly, it is important that a circular (plate) [area of interest (AOI)]({{site.url}}/setup.html) is defined. 
 <figure>
   <img src="{{site.url}}/assets/images/chara1.png" alt="Voronoi example" height="250x"/>
   <figcaption>The blue edges show the calculated Voronoi cell areas. The visualization of these can be activated from the Options window </figcaption>
