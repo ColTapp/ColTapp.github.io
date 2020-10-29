@@ -4,7 +4,7 @@ title: Options
 ---
 # Options
 
-The default parameters of each functionality of ColTapp can be tuned by the user within the _Options_. 
+The default parameters of each functionality of ColTapp can be adjusted by the user within the _Options_. 
 
 The _Options_ window is divided into four tabs : _Global_, _Detect_, _Main_ (_TL_ or _EP_) and _Visualize_. The latter tabs regroup parameters corresponding to each of the main panels' corresponding tab, the first tab, _Global_ (left on the following figure), regroups all parameters which apply globally, whatever the analysis step.
 
