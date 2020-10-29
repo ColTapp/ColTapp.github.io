@@ -12,12 +12,14 @@
   link: /detect.html
 - name: Colony characteristics
   link: /characteristics.html
-- name: Radius tracking
+- name: Time-lapse analysis
   link: /timelapse.html
-- name: Reference parameters
-  link: /refparam.html
 - name: Endpoint analysis
   link: /endpoint.html
+- name: Reference parameters
+  link: /refparam.html
+- name: Reference parameters
+  link: /refparam.html
 - name: Options
   link: /options.html
 - name: Export
