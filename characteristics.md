@@ -21,11 +21,15 @@ Colonies touching each other will strongly affect perimeter and halo measurments
 
 ### Density metrics
 As described in original article for the software presentation, those are values based on colony proximity. The user can set a radius cutoff for metrics that strictly depend on distance to all colonies, so that colonies further than this radius cutoff will not be taken into consideration for the calculation. 
+
 For example, should 4 colonies be on a plate, with 3 colonies at distance 1, 2, 4 to the focal colony, ∑1/D would be 1+1/2+1/4=1.75 for an infinite cutoff, while it would be 1+1/2=1.5 if the cutoff is set to be below a distance of 4. Note that this radius cutoff can be handy in crowded plates when the user knows the diffusion constants of signalling molecules and the time for which it can have diffused.
  
-The angular diameter is calculated as 𝐴D = ∑ 2*arctan(R<sub>i</sub> / D<sub>i</sub>), where R<sub>_</sub> and D<sub>i</sub> are the radius and distance from the focal colony of each neighboring colony. This metric will thus assume bigger colonies have a larger influence on focal colonies than their smaller counterparts.
+The _angular diameter_ is calculated as 𝐴D = ∑ 2*arctan(R<sub>i</sub>/D<sub>i</sub>)
 
-The *Voronoi* area is not sensitive to the radius cutoff, but is sensitive to a proper plate border definition. Voronoi cell areas describe the total space on an agar plate available to each colony, obtained by tracing perpendicular bisector lines between each pair of neighboring colonies. For the Voronoi calculation to work properly, it is important that a circular (plate) [area of interest (AOI)]({{site.url}}/setup.html) is defined. 
+where R<sub>i</sub> and D<sub>i</sub> are the radius and distance from the focal colony of each neighboring colony. This metric will thus assume bigger colonies have a larger influence on focal colonies than their smaller counterparts.
+
+The _Voronoi area_ is not sensitive to the radius cutoff, but is sensitive to a proper plate border definition. _Voronoi_ cell areas describe the total space on an agar plate available to each colony, obtained by tracing perpendicular bisector lines between each pair of neighboring colonies. For the Voronoi calculation to work properly, it is important that a circular (plate) [area of interest (AOI)]({{site.url}}/setup.html) is defined.
+
 <figure>
   <img src="{{site.url}}/assets/images/chara1.png" alt="Voronoi example" height="250x"/>
   <figcaption>The blue edges show the calculated Voronoi cell areas. The visualization of these can be activated from the Options window </figcaption>
