@@ -41,7 +41,7 @@ This option exports lists as binary values (0: not on list, 1: on list) correspo
     - colonies in close range to each other ("near col")
     
 ### Density metrics
-Various density metrics quantifying the density of colonies can be selected for export. For details on the various measurements, see [manuscript](https://doi.org/10.1038/s41598-020-72979-4) and [colony characteristics]({{site.url}}/characteristics.html).
+Various density [metrics quantifying the density]({{site.url}}/characteristics.html) of colonies can be selected for export. For details on the various measurements.
 
 ### Shape and color
-Various shape and color metrics quantifying the color and shape of colonies can be selected for export. For details on the various measurements, see [manuscript](https://doi.org/10.1038/s41598-020-72979-4) and [colony characteristics]({{site.url}}/characteristics.html).
+Various shape and color metrics quantifying the [color and shape] ({{site.url}}/characteristics.html) of colonies can be selected for export.

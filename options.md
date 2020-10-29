@@ -59,11 +59,12 @@ ColTapp allows to group colonies into [lists](https://coltapp.github.io/detect.h
 - The _Kymograph threshold shift_ (default:0.17)
 - The _Scale radius for overlap_ factor (default: 1) is multiplied to the radius of the focal colony from which [neighboring colonies are tested for overlap] (https://coltapp.github.io/timelapse.html). By increasing it (>1), ranges of angles corresponding not only to overlapping colonies but also very close colonies will be discarded from the kymograph creation process. Note that this increase might lead to high proportions of angles to be discarded. Decreasing the scaling factor (<1) leads to reduced ranges of excluded angles. This might be useful in densely populated plates to still achieve some overlap exclusion to increase quality of kymographs at earlier timepoints. Note that if more than 90% of all angles are discarded because of overlap, the exclusion of angles is omitted completely, to avoid reducing the available data too much. 
 - This overlap detection functionality can be completely removed by the user by ticking the _overlap exclusion_ tickbox.
-- The images can be transformed with the lighting correction algorithm in the [_Detect_ tab ](https://coltapp.github.io/detect.html). The resulting enhanced images are typically for a clearer visualization for the user, and by default not used downstream for image analysis. However, a user can tick the box _Use enhance images_ if willing to use these transformed images as input for the radii tracking algorithm.
+- The images can be transformed with the lighting correction algorithm in the [_Detect_ tab ](https://coltapp.github.io/detect.html). The resulting enhanced images are typically meant to improve visualization for the user, and by default not used downstream for image analysis. However, a user can tick the box _Use enhance images_ if willing to use these transformed images as input for the _Radii tracking_ algorithm.
 
 ### Define appearance time parameters
-- The _Apperance time threshold mode_ (Micrometer or Pixel)
-- The _Detection threshold radius_ (default: 200)
+
+- The _Apperance time threshold mode_ defines the unit of the threshold a colony radius should reach for the colony to be macroscopically detectable. (default: micrometers)
+- The _Detection threshold radius_ defines the value of the threshold a colony radius should reach for the colony to be macroscopically detectable. (default: 200)
 - The _Number of frames for fit_ (default: 50)
 
 ### Additional possibilities
