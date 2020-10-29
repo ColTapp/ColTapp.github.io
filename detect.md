@@ -18,7 +18,7 @@ Mainly for visualization and manual correction of detected colonies, the graysca
 
 ### Detect colonies (*d*)
 Automatic colony detection can be started with the _Find Colonies_ button (*d*). If in _TL_ mode, the function is executed on the current frame while in _EP_ mode, the user is asked to enter the frames on which the colony search should be executed. Accuracy and computational speed can be increased by specifying a narrow range of minimal and maximal radius. The range can be specified either by inserting values in pixel in _Options_ or can be derived automatically from the smallest and biggest circle drawn on the currently displayed image with the button _Define radius range_ (*d*).
-Refer to the [manuscript](https://doi.org/10.1038/s41598-020-72979-4) for details on the image analysis steps used.
+Refer to the [manuscript](https://doi.org/10.1038/s41598-020-72979-4) for details on the image analysis steps used and see [Options]({{site.url}}/options) for a description of tuneable parameters for the colony detection (for example to switch to dark colonies on bright background, useful for phage plaques).
 
 ### Manual correction of detected colonies (*e*)
 Addition of non-detected colonies and false positive removal is possible through simple mouse-guided operations (*e*). Addition can be activated by either the button _(C) Add_ or the indicated shortcut _C_. Left-click on a colony center, hold and drag shown circle to border of colony, release and click once to confirm. Additionally, if the tickbox _Add/Remove with click_ is activated, colony addition can directly be started with a left-click on the colony center (hold and drag as described above).
