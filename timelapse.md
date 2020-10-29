@@ -50,10 +50,10 @@ The _Edge detection_ method uses a series of edge detection and morphological op
 </figure>
 
 ### Radial growth curve corrections
-ColTapp has an inbuilt function to automatically detect radial growth curves with probable errors derived from kymographs based on the number of local maxima, size of radius differences from frame to frame, monotonicity, and number of frames without a successful radius determination (button _d Find failed kymographs_). These (or any) radial growth curves can be manually corrected with a dedicated tool (button _e Correct kymographs_) which allows the user to switch for each colony individually between Global thresholding and Edge detection method, and adjust any parameter of the two methods to derive best parameter combinations to derive the radial growth curve from the kymograph.
+ColTapp has an inbuilt function to automatically detect radial growth curves with probable errors derived from kymographs based on the number of local maxima, size of radius differences from frame to frame, monotonicity, and number of frames without a successful radius determination (button _d Find failed kymographs_). These (or any) radial growth curves can be manually corrected with a dedicated tool (button _e Correct kymographs_) which allows the user to switch for each colony individually between Global thresholding and Edge detection method, and adjust any parameter of the two methods to derive best parameter combinations to derive the radial growth curve from the kymograph. See below the seperate GUI layout, a table describing all parameters and the display provided by the 'Show steps' button.
 <figure>
   <img src="{{site.url}}/assets/images/TL4.png" alt="Kymograph correction tool" height="70%"/>
-  <figcaption>Radial growth curve correction tool (Supplementary Fig. S3 of publication). The kymograph is displayed in the middle, buttons to move to last colony, approve radial growth curve, delete radial growth curve and switch growth curve detection mode, as well as possibilities to add the colony to a list, show all image processing steps (for _Edge detection_ mode only) and abort or save all made changes are on the bottom. On the right side, sliders to change a variety of numerical values in the image processing pipeline are located. Keyboard arrows move the Global threshold or the upper threshold of the Canny edge detection depending on the growth curve detection mode. </figcaption>
+  <figcaption>Radial growth curve correction tool (Supplementary Fig. S3 of publication). The kymograph is displayed in the middle, buttons to move to last colony, approve radial growth curve, delete radial growth curve and switch growth curve detection mode, as well as possibilities to add the colony to a list, show all image processing steps (for _Edge detection_ mode only, see next image) and abort or save all made changes are on the bottom. On the right side, sliders to change a variety of numerical values in the image processing pipeline are located. Keyboard arrows move the Global threshold or the upper threshold of the Canny edge detection depending on the growth curve detection mode. </figcaption>
 </figure>
 
 | Parameter | Mode | Function |
@@ -73,3 +73,8 @@ ColTapp has an inbuilt function to automatically detect radial growth curves wit
 | Mask scaling | Edge | Scaling factor for initial mask creating for iterative contouring |
 | Line length | Edge | Length in pixels of a line closing morphological operation |
 | Line angle | Edge | Angle of a line closing morphological operation |
+
+<figure>
+  <img src="{{site.url}}/assets/images/TL7.png" alt="The display of the 'show steps' button" height="700px"/>
+  <figcaption>The 'show steps' button displays the image processing steps of the Edge method to derive radial growth curves</figcaption>
+</figure>
