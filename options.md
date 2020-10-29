@@ -44,20 +44,21 @@ ColTapp allows to group colonies into [lists](https://coltapp.github.io/detect.h
 - Should the user want to detect white colonies on a darker background,
 
 ### Colony detection parameters
-- The _Circle detection_ mode (Regionprops or direct) (default: Regionprops)
-- The _imfindcircle sensitivity_ (default:0.94)
-- The _Minimal Radius_ (default:20 pixels)
-- The _Maximal Radius_ (default:65 pixels)
-- The _Scale bounding box_ (default:1.35)
-- The _Min distance from border_ (default:10 pixels)
-- The _Foreground bias_ (default:0.17)
-- The _Min area foreground_ is the proportion (default:0.7)
-- The _Max overlap (2 circles)_ is the proportion (default:0.9)
-- The _Min rad difference_ (default:10 pixels)
-- The _Min center distance_ (default:20 pixels)
-- The _Max total overlap_ is the proportion (default:0.95)
-- The _Start iterative overlap_ is the proportion (default:0.8)
-- The _Final min center distance_ (default:2 pixels)
+- The _Circle detection_ mode (Regionprops or direct) (default: Regionprops). Circle detection can be operated in two modes: _Regionprops_ mode utilizes a multi-step process to find first isolated foreground objects (colonies) and then applies circle detection methods only on subparts of the images containing isolated objects. The _direct_ mode directly searches for colonies on the entire image. _Regionprops_ mode is expected to be more accurate in cases with many touching colonies and usually is slightly faster.
+- The _imfindcircle sensitivity_ (default:0.94). For both modes. This value determines the sensitivity for finding circles. Higher values let weaker circles pass and helps finding less prominent (lower contrast from colony to agar) but also leads to more false positive circles.
+- The _Minimal Radius_ (default:20 pixels). For both modes. Minimal radius of circle search range,  utilized by the MATLAB function [imfindcircles](https://ch.mathworks.com/help/images/ref/imfindcircles.html). This parameter is crucial to set correctly.
+- The _Maximal Radius_ (default:65 pixels). For both modes. Maximal radius of circle search range, utilized by the MATLAB function [imfindcircles](https://ch.mathworks.com/help/images/ref/imfindcircles.html). This parameter is crucial to set correctly.
+- The _Scale bounding box_ (default:1.35). For _regionprops_ mode only. After the isolated objects are identified, sub-images cropped around the object are used for further processing. The size of the cropped rectangle is scaled with the _Scale bounding box_ factor.
+- The _Min distance from border_ (default:10 pixels). For _regionprops_ mode only. After the sub-images are generated, circles are detected within. _Min distance from border_ defines the minimal distance of the circle centers from the border of this sub-image.
+- The _Foreground bias_ (default:0.17). For _regionprops_ mode only. To check if detected circles are considered as foreground, the sub-image is binarized (Otsu's method). The _Foreground bias_ is subtracted from the automatically generated threshold to classify more pixels as foreground.
+- The _Min area foreground_ (default:0.7). For _regionprops_ mode only. After a binarized sub-image is generated, ColTapp checks if the proportion of pixels classified as foreground exceeds the _Min area foreground_ value. Circles with lower proportion are discarded.
+- The _Max overlap (2 circles)_ (default:0.9). For _regionprops_ mode only. If more than one circle is detected on a subimage, ColTapp checks the amount of overlap of these circles. If a circle overlapps with another circle for more than _Max overlap_ of its own area, the circle quality (from the MATLAB function [imfindcircles](https://ch.mathworks.com/help/images/ref/imfindcircles.html)) is compared and only the circle with higher quality is kept.
+- The _Min rad difference_ (default:10 pixels). For _regionprops_ mode only. If more than one circle is remaining, the center distance is calculated. If the distance is smaller than _Min center distance_ and the radius difference between the two circles is less than _Min rad difference_ the cirlce with the lower quality is discarded.
+- The _Min center distance_ (default:20 pixels) For _regionprops_ mode only. If more than one circle is remaining, the center distance is calculated. If the distance is smaller than _Min center distance_ and the radius difference between the two circles is less than _Min rad difference_ the cirlce with the lower quality is discarded.
+- The _Max total overlap_ (default:0.95). For _regionprops_ mode only. The area of each circle overlapping with any other circle is calculated. If the proportion of pixels classified as overlapping is higher than _Max total overlap_, this circle is discarded.
+- The _Start iterative overlap_ is the proportion (default:0.8). For _regionprops_ mode only. Final step in the _regionprops_ mode. If there are still more than one circle passing all quality control steps, the total overlap proportion is compared with _Start iterative overlap_. Cirlces that have higher proportion of overlapping area are discarded. If no circle passed this check, the threshold is increased until at least one circle passes this control step.
+- The _Final min center distance_ (default:2 pixels). For both modes. After all circles have been detected, the distance between all centers is calculated and circles are discarded based on the circle quality if two circle centers are closer to each other than _Final min center distance_.
+
 
 
 ## Main-TL
