@@ -80,6 +80,7 @@ ColTapp has an inbuilt function to automatically detect radial growth curves wit
 </figure>
 
 ### Apperance time determination
+Once the colony radial growth curves defined, we can derive each colony appearance time and growth rate.
 We define a detectable size threshold in micrometers (Rthresh), and the time at which a colony reaches this threshold as the colony appearance time. The minimal possible Rthresh depends on the image quality and needs to be set at the same value for comparisons of tapp in different experiments. In our analysis setting, we assume that colonies
 reaching this size are already in the linear growth phase.
 Tracking the colony radius over time using time-lapse imaging makes it possible to directly determine colony appearance time and linear radial growth rate. ColTapp determines these parameters by detecting the first of 6 consecutive frames for which a colony radius is bigger than Rthresh (default: 200 μm). The following radius measurements within a user-specified timespan in hours (Frlin, default: 10 h) are used for a linear regression (tick slopes in the following figure). Frlin might need to be reduced to only use a timespan in which radial growth is approximately linear. Additionally, Rthresh can be adjusted depending on the image resolution and bacterial species investigated. Both can be adjusted in the [_Options_](https://coltapp.github.io/options.html).
