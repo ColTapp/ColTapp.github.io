@@ -2,7 +2,7 @@
 layout: default
 title: Time-lapse
 ---
-# Radius tracking (time-lapse)
+# Time-lapse analysis
 ColTapp can track the radius of detected colonies through time on time-lapse image series. First, all colonies need to be [detected]({{site.url}}/detect.html) on the latest (or a late) frame in a time-lapse series. All time-lapse associated functions are accessible through a dedicated tab on the GUI. The buttons are labeled with letters and text on this page referring to buttons uses these letters.
 <figure>
   <img src="{{site.url}}/assets/images/TL0.png" alt="Time-lapse tab of GUI" height="550px"/>
