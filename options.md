@@ -4,13 +4,13 @@ title: Options
 ---
 # Options
 
-The default parameters of each functionality of ColTapp can be tuned by the user within the _Options_. The _Options_ window is divided into four tabs : _Global_, _Detect_, _Main_ (_TL_ or _EP_) and _Visualize_. 
+The default parameters of each functionality of ColTapp can be tuned by the user within the _Options_. 
+
+The _Options_ window is divided into four tabs : _Global_, _Detect_, _Main_ (_TL_ or _EP_) and _Visualize_. The latter tabs regroup parameters corresponding to each of the main panels' corresponding tab, the first tab, _Global_ (left on the following figure), regroups all parameters which apply globally, whatever the analysis step.
 
 ## Global
-While the latter tabs regroup parameters corresponding to each corresponding tab of the main panel, the first tab, _Global_ (left panel of the following figure), regroups all parameters which apply globally, whatever the analysis step.
 
 ### Color to grayscale method selection
-
 Colored RGB images are transformed into grayscale images for many image analysis steps (colony detection, colony kymograph derivation from time-lapse images). ColTapp offers 16 different methods for grayscale conversion. 
 Using one of the three RGB channels is computationally quick and generally precise enough, but in some special cases, the user may want to use a different conversion, as for example a transformation to other classical color spaces (e.g. CIELAB) and using one of the generated channels. The inbuilt MATLAB function rgb2gray which uses a weighted image conversion, retaining information of all three color channels, is also available. With "Select RGB to grayscale method from examples" the user may visualize the result of each different method (as shown in the right panel of the following Figure) and select the most appropriate method.
 <figure>
@@ -19,7 +19,6 @@ Using one of the three RGB channels is computationally quick and generally preci
 </figure>
 
 ### Visualize on image
-
 - The user can use toggles to chose which data should be visualized directly on the images in the main panel.
 <figure>
   <img src="{{site.url}}/assets/images/Visualize_on_image.png" alt="Visualize on image" height="70%"/>
@@ -28,27 +27,38 @@ Using one of the three RGB channels is computationally quick and generally preci
 - The _Redefine lighting correction area_ button allows a user to chose a new subset of the image as input to the [lighting correction algorithm](https://coltapp.github.io/detect.html).
 
 ### Reference growth data
-
 When extracted automatically from an analyzed control experiment, the [reference appearance time](https://coltapp.github.io/refparam.html) of that experiment is 
 averaged using the mean, by default. Yet, users concerned by the presence of outliers in the growth control experiment may chose to use the median (or any user-defined quantile) via this tab.
 
 ### Save options
-
 Autosave, back-up save
 
 ### Reset active list
-
 ColTapp allows to group colonies into [lists](https://coltapp.github.io/detect.html) to use certain downstream functions only on the indicated subset of colonies. User can remove all colonies from the active list on the main panel with this button.
 
 ## Detect
 
 ### Image preprocessing
-
 - Default:Adaptive, Global, none
 - Binarization sensitivity
 - Should the user want to detect white colonies on a darker background,
 
 ### Colony detection parameters
+- The _Circle detection_ mode (Regionprops or direct) (default: Regionprops)
+- The _imfindcircle sensitivity_ (default:0.94)
+- The _Minimal Radius_(default:20 pixels)
+- The _Maximal Radius_(default:65 pixels)
+- The _Scale bounding box_(default:1.35)
+- The _Min distance from border_(default:10 pixels)
+- The _Foreground bias_(default:0.17)
+- The _Min area foreground_ is the proportion (default:0.7)
+- The _Max overlap (2 circles)_ is the proportion (default:0.9)
+- The _Min rad difference_(default:10 pixels)
+- The _Min center distance_(default:20 pixels)
+- The _Max total overlap_ is the proportion (default:0.95)
+- The _Start iterative overlap_ is the proportion (default:0.8)
+- The _Final min center distance_(default:2 pixels)
+
 
 ## Main-TL
 
