@@ -46,18 +46,18 @@ ColTapp allows to group colonies into [lists](https://coltapp.github.io/detect.h
 ### Colony detection parameters
 - The _Circle detection_ mode (Regionprops or direct) (default: Regionprops)
 - The _imfindcircle sensitivity_ (default:0.94)
-- The _Minimal Radius_(default:20 pixels)
-- The _Maximal Radius_(default:65 pixels)
-- The _Scale bounding box_(default:1.35)
-- The _Min distance from border_(default:10 pixels)
-- The _Foreground bias_(default:0.17)
+- The _Minimal Radius_ (default:20 pixels)
+- The _Maximal Radius_ (default:65 pixels)
+- The _Scale bounding box_ (default:1.35)
+- The _Min distance from border_ (default:10 pixels)
+- The _Foreground bias_ (default:0.17)
 - The _Min area foreground_ is the proportion (default:0.7)
 - The _Max overlap (2 circles)_ is the proportion (default:0.9)
-- The _Min rad difference_(default:10 pixels)
-- The _Min center distance_(default:20 pixels)
+- The _Min rad difference_ (default:10 pixels)
+- The _Min center distance_ (default:20 pixels)
 - The _Max total overlap_ is the proportion (default:0.95)
 - The _Start iterative overlap_ is the proportion (default:0.8)
-- The _Final min center distance_(default:2 pixels)
+- The _Final min center distance_ (default:2 pixels)
 
 
 ## Main-TL
