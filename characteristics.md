@@ -3,7 +3,7 @@ layout: default
 title: Colony characteristics
 ---
 # Colony characteristics
-ColTapp includes various ways to quantify image based color, shape and plate density metrics. They are optional and are directly calculated when executing the [data export]({{site.url}}/export.html). The Voronoi cell area can also be calculated from the Detect tab and can be visualized on the displayed images.
+ColTapp includes various ways to quantify image based color, shape and plate density metrics. Most of these metrics are directly calculated when executing the [data export]({{site.url}}/export.html), according to the user wishes, apart from the Voronoi cell areas which need to be calculated prior export, from the _Detect_ tab and can be visualized on the displayed images.
 
 ### Shape and color
 These export option proposes to export some simple colony measurements based on the detected colonies. Note that the program recalculates those metrics at each export, and this can be lengthy for large images or high colony numbers. However, they are a good start for automatically assigning colonies to categories, e.g. species based on colony color, or roughness.
