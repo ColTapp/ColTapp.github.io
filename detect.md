@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Detect colonies
+title: Colony detection
 ---
-# Detect colonies
+# Colony detection
 The detection tab of ColTapp includes functions to find colonies on plates and many auxilliary functions.
 <figure>
   <img src="{{site.url}}/assets/images/Detect_1.png" alt="Detection tab" height="550px"/>
