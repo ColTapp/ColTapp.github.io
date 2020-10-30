@@ -44,4 +44,4 @@ This option exports lists as binary values (0: not on list, 1: on list) correspo
 Various [metrics quantifying the density of colonies]({{site.url}}/characteristics.html) can be selected for export. Note that apart from the _Voronoi area_ they are directly calculated when executing the data export according to the user wishes, and recalculated at each export, which may be lengthy for large images or high colony numbers.
 
 ### Shape and color
-Various shape and color metrics quantifying the [color and shape] ({{site.url}}/characteristics.html) of colonies can be selected for export.
+Various shape and color metrics quantifying the [color and shape]({{site.url}}/characteristics.html) of colonies can be selected for export. As the dentity metrics, they are calculated when executing the data export, and recalculated at each export.
