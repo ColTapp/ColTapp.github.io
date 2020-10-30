@@ -41,7 +41,7 @@ This option exports lists as binary values (0: not on list, 1: on list) correspo
     - colonies in close range to each other ("near col")
     
 ### Density metrics
-Various density [metrics quantifying the density]({{site.url}}/characteristics.html) of colonies can be selected for export. For details on the various measurements.
+Various [metrics quantifying the density of colonies]({{site.url}}/characteristics.html) can be selected for export. Note that apart from the _Voronoi area_ they are directly calculated when executing the data export according to the user wishes, and recalculated at each export, which may be lengthy for large images or high colony numbers.
 
 ### Shape and color
 Various shape and color metrics quantifying the [color and shape] ({{site.url}}/characteristics.html) of colonies can be selected for export.
