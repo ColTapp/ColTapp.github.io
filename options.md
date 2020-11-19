@@ -4,7 +4,7 @@ title: Options
 ---
 # Options
 
-The default parameters of each functionality of ColTapp can be adjusted by the user within the _Options_. 
+The default parameters of each functionality of ColTapp can be adjusted by the user within the _Options_. The _Options_ also include various auxiliary functions.
 
 The _Options_ window is divided into four tabs : _Global_, _Detect_, _Main_ (_TL_ or _EP_) and _Visualize_. The latter tabs regroup parameters corresponding to each of the main panels' corresponding tab, the first tab, _Global_ (left on the following figure), regroups all parameters which apply globally, whatever the analysis step.
 
@@ -39,9 +39,9 @@ ColTapp allows to group colonies into [lists](https://coltapp.github.io/detect.h
 ## Detect
 
 ### Image preprocessing
-- Default:Adaptive, Global, none
-- Binarization sensitivity
-- Should the user want to detect white colonies on a darker background,
+- _Image binarization method_ can be set by the user. The default uses _Adaptive_ thresholding. This option generally works well even for slightly inhomogenous lighting conditions but is a bit slower than the basic _Global_ binarization which utilizes one threshold value (Otsu's method). If the user utilizes already binarized images, the binarization step can be omitted by setting the binarization method to _none_.
+- Higher values of _Binarization sensitivity_ leads to higher amount of foreground classification. The default value works well with white/yellow colonies on blood agar but is also good enough to binarize the image reliable if regular agar is used.
+- By default, colonies (circles) are considered to be lighter than the dark agar background. This can be inverted with the tickbox _Dark colonies on bright background_. We found this especially useful for detection of phage plaques on a bacterial lawn.
 
 ### Colony detection parameters
 - The _Circle detection_ mode (Regionprops or direct) (default: Regionprops). Circle detection can be operated in two modes: _Regionprops_ mode utilizes a multi-step process to find first isolated foreground objects (colonies) and then applies circle detection methods only on subparts of the images containing isolated objects. The _direct_ mode directly searches for colonies on the entire image. _Regionprops_ mode is expected to be more accurate in cases with many touching colonies and usually is slightly faster.
@@ -76,24 +76,35 @@ ColTapp allows to group colonies into [lists](https://coltapp.github.io/detect.h
 
 - The _Apperance time threshold mode_ defines the unit of the threshold a colony radius should reach for the colony to be macroscopically detectable. (default: micrometers)
 - The _Detection threshold radius_ defines the value of the threshold a colony radius should reach for the colony to be macroscopically detectable. (default: 200)
-- The _Number of frames for fit_ (default: 50)
+- The _Number of frames for fit_ defines the number of frames starting from the first frame a colony radius is bigger than the _detection threshold_ utilized for linear extrapolation to determine appearance time (default: 50).
 
 ### Additional possibilities
-- _Process timelapse subset_
-- _Manually process timelapse_
-- _Recalculate kymograph radius_
-- _Select curves to delete_ 
-- _Restore deleted curves_
-- _Reset registration_
-- _Delete radius data of selected frames_
-- _Scale detected radius_
+- _Process timelapse subset_ allows the user to define combined subsets of colonies and frames to re-run the time-lapse processing algorithm.
+- _Manually process timelapse_ is a function which presents to the user a series of sub-images of colonies (user-defined subset of colonies and frames) and the user can draw the colony circle manually. This can be utilized of for certain frames ColTapp failed to detect a correct radius due to image artifacts.
+- _Recalculate kymograph radius_ is a failsafe function. If by any kind of weird mistake all radius data gets deleted but the kymographs are still present, the radial growth curves can be recalculated with this button.
+- _Select curves to delete_ opens a small extra GUI showing the radial growth curve for each colony. A user can click on a line and then click the _Show col._ button to display the Colony number. This is helpful to identify the colony for which the time-lapse processing failed and corrections (for example to the center) are needed before re-running this colony with the _Process timelapse subset_ button. If the selected radial growth curve cannot be corrected, it can be deleted from the dataset with the _Delete_ button. Be aware, this button only replaces all data within the radial growth curve data with NaN values while retaining the colony information. Additional buttons to display user-lists and adding/removing colonies to lists are also inbuilt in this mini-GUI.
+<figure>
+  <img src="{{site.url}}/assets/images/Options_SelDel.png" alt="Select to delete mini-GUI" width="600px"/>
+  <figcaption> The mini-GUI opened by the Select curves to delete button. </figcaption>
+</figure>
+- _Restore deleted curves_ recovers radial growth curve data for colonies deleted with the _Select curves to delete_.
+- _Reset registration_ is helpful if the user-defined rectangle for image registration was suboptimal and needs to be drawn anew.
+- _Delete radius data of selected frames_ is a function that lets a user replace the radius data of all colonies at a user-defined frame(s) with NaN values. This can be helpful if there are lighting artifacts at certain timepoints within a time-lapse.
+- _Scale detected radius_ opens a mini-GUI to scale initially detected radii. This function allows to increase/decrease the colony radius defined by the initial _Find colonies_ button within the _Detect_ tab. The scaling factor can be adjusted by the slider on the top right. The number displayed in the _Last frame (Reference)_ field is the frame displayed. The user can select to scale only a subset of colonies based on their size (based on quantiles). For example, only the smallest few colonies can be scaled to have a bigger radius.
+A given use-case can be: Detecting colonies not on the last but an earlier frame. 
+A reason could be that the colonies merge and touch on the last frame which makes colony detection more difficult. But the cropped sub-images utilized for time-lapse processing are based on this detected radius which might be too small to account for the size of colonies on the late frames. Therefore, the detected radius can be scaled to match the later sizes.
+The button _Apply & Continue_ allows to fix the made changes and continue scaling (e.g. a different subset of colonies). _Abort_ quits and does not save any changes. _Save & Quit_ quits and saves changes. 
+<figure>
+  <img src="{{site.url}}/assets/images/Options_ScaleRad.png" alt="Scale detected radius mini-GUI" width="700px"/>
+  <figcaption> The mini-GUI opened by the Scale detected radius button. </figcaption>
+</figure>
 
 ## Main-EP
 ### Additional possibilities
-- _Apply spatial calibration factor to all frames_
-- _Apply area of interest to all frames_
-- _Apply both to all frames_
-- _Remove linked and overlay folders_
+- _Apply spatial calibration factor to all frames_ applies the spatial calibration factor of the currently displayed frame to all other frames.
+- _Apply area of interest to all frames_ applies the area of interest of the currently displayed frame to all other frames.
+- _Apply both to all frames_ applies the spatial calibration factor and the the area of interest of the currently displayed frame to all other frames.
+- _Remove linked and overlay folders_ removes all stored linked and overlay folders.
 
 ## Visualize
 
